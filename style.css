@@ -82,14 +82,17 @@ form button {
     cursor: pointer;
 }
 
-main .conteiner {
-    max-width: 1240px;
-    margin: 0 auto;
+main .conteiner-for-opening {
+    max-width: 100%;
+    /* margin: 0 auto; */
+    background-color: #F2F0F1;
 }
 
 .opening-section {
-    width: 100%;
+    max-width: 1240px;
     height: 663px;
+    margin: 0 auto;
+
 }
 
 .background-image {
@@ -106,7 +109,6 @@ main .conteiner {
     flex-direction: column;
     justify-content: space-between;
     margin-top: 127px;
-    margin-left: 100px;
 }
 
 .opening-title {
@@ -122,7 +124,7 @@ main .conteiner {
     font-size: 16px;
 }
 
-main .conteiner .opening-section .opening-info button {
+main .conteiner-for-opening .opening-section .opening-info button {
     background: none;
     border: 2px solid black;
     border-radius: 62px;
@@ -138,7 +140,7 @@ main .conteiner .opening-section .opening-info button {
     cursor: pointer;
 }
 
-main .conteiner .opening-section .opening-info button::after {
+main .conteiner-for-opening .opening-section .opening-info button::after {
     content: "";
     width: 0px;
     height: 0px;
@@ -152,13 +154,13 @@ main .conteiner .opening-section .opening-info button::after {
     transition: 0.3s;
 }
 
-main .conteiner .opening-section .opening-info button:hover::after {
+main .conteiner-for-opening .opening-section .opening-info button:hover::after {
     width: 300px;
     height: 300px;
     transition: 0.3s;
 }
 
-main .conteiner .opening-section .opening-info button:hover {
+main .conteiner-for-opening .opening-section .opening-info button:hover {
     color: white;
     transition: 0.3s;
 }
@@ -170,67 +172,140 @@ main .conteiner .opening-section .opening-info button:hover {
     font-size: 40px;
     font-weight: bold;
 }
-.stat li{
+
+.stat li {
     height: 74px;
     padding-right: 16px;
 }
-.brand{
+
+.brand {
     display: flex;
     flex-direction: column;
     border-right: 2px solid rgba(0, 0, 0, 0.185);
 }
-.brand::after{
+
+.brand::after {
     content: "International Brands";
     font-size: 16px;
     font-weight: normal;
     color: rgba(0, 0, 0, 0.61);
 }
-.products{
+
+.products {
     display: flex;
     flex-direction: column;
     padding-left: 16px;
     border-right: 2px solid rgba(0, 0, 0, 0.185);
 }
-.products::after{
+
+.products::after {
     content: "High-Quality Products";
     font-size: 16px;
     font-weight: normal;
     color: rgba(0, 0, 0, 0.61);
 }
-.costumers{
+
+.costumers {
     display: flex;
     flex-direction: column;
     padding-left: 16px;
 }
-.costumers::after{
+
+.costumers::after {
     content: "Happy Customers";
     font-size: 16px;
     font-weight: normal;
     color: rgba(0, 0, 0, 0.61);
 }
 
-.star1{
+.star1 {
     position: absolute;
     margin-top: 321px;
     margin-left: 650px;
     animation: shining 3s linear infinite;
 }
-.star2{
+
+.star2 {
     position: absolute;
     margin-top: 110px;
-    margin-left: 1055px;
+    margin-left: 1100px;
     width: 104px;
     height: 104px;
     animation: shining 3s linear infinite;
 }
-@keyframes shining{
-    0%{
+
+@keyframes shining {
+    0% {
         scale: 0.7;
     }
-    50%{
+
+    50% {
         scale: 1;
     }
-    100%{
+
+    100% {
         scale: 0.7;
     }
+}
+
+.carousel {
+    width: 100%;
+    height: 122px;
+    background-color: black;
+
+}
+
+.brands {
+    max-width: 1240px;
+    height: 122px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    mask-image: linear-gradient(
+        to right,
+        rgba(0,0,0,0),
+        rgba(0,0,0,1) 20%,
+        rgba(0,0,0,1) 80%,
+        rgba(0,0,0,0)
+    );
+}
+
+.brands ul {
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+@keyframes scrolleft{
+    to{
+        margin-left: -200px;
+    }
+}
+
+.item{
+    position: absolute;
+    margin-left: max(calc(250px * 5), 100%);
+    animation: scrolleft 30s linear infinite;
+}
+.versaace{
+    animation-delay: calc(30s / 5 * (5 - 1) * -1);
+}
+.zara{
+    animation-delay: calc(30s / 5 * (5 - 2.1) * -1);
+
+}
+.gucci{
+    animation-delay: calc(30s / 5 * (5 - 2.9) * -1);
+
+}
+.prada{
+    animation-delay: calc(30s / 5 * (5 - 4) * -1);
+
+}
+.klein{
+    animation-delay: calc(30s / 5 * (5 - 5) * -1);
+
 }
